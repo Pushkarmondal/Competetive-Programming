@@ -349,36 +349,60 @@ int min=*min_element(all(a));
 
 
 // }
-SUBSET PROBLEM USING RECURSION
+// SUBSET PROBLEM USING RECURSION
 
-void func(int ind,vector<int>&ds,int arr[],int n){
-    if(ind==n){
-        for(auto it :ds){
-            cout<<it<<" ";
-        }
-        cout<<endl;
+// void func(int ind,vector<int>&ds,int arr[],int n){
+//     if(ind==n){
+//         for(auto it :ds){
+//             cout<<it<<" ";
+//         }
+//         cout<<endl;
+//         return;
+//     }
+//     ds.push_back(arr[ind]);
+//     func(ind+1,ds,arr,n);
+//     ds.pop_back();
+//     func(ind+1,ds,arr,n);
+
+//
+int n,m;
+void findpath(int i,int j,string s){
+    // BASE CASE FOR BOUNDARY.
+    if(i>=n || i>=m)
+        return;
+
+// IF WE FIND ANSWER WE CAN RETURN ONE OF ANSWER.
+    if(i==n-1 && j==m-1){
+        cout<<s<<endl;
         return;
     }
-    ds.push_back(arr[ind]);
-    func(ind+1,ds,arr,n);
-    ds.pop_back();
-    func(ind+1,ds,arr,n);
+    //MOVING DOWNSIDE.
+    s+='D';
+    findpath(i+1,j,s);
+    s.pop_back();
 
-}
+    //MOVING RIGHTSIDE.
+    s+='R';
+    findpath(i,j+1,s);
+    s.pop_back();
+
+} 
+
 
 // const int m=1e9+7;
 //   void solve(){
-//    int a,b;
-//    cin>>a>>b;
-//    cout<<(a^b)<<endl;
+//     int a,b;
+//     cin>>a>>b;
+//     cout<<a+b<<endl;
+       
 // }
     
  
 // int main(){
-//      solve();
-//     // int t;
-//     //    cin>>t;
-//     //    while(t--){
-//     //     solve();
-//     //    }
+//      // solve();
+//     int t;
+//        cin>>t;
+//        while(t--){
+//         solve();
+//        }
 // }
