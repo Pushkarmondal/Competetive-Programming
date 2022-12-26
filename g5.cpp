@@ -365,7 +365,12 @@ int min=*min_element(all(a));
 //     func(ind+1,ds,arr,n);
 
 //
-// 2D RECURSION RAT AND MOOSE STARTING***********
+
+
+//STRIVER RECURSION >>>>>>
+
+// (Q) 2D RECURSION RAT AND MOOSE STARTING***********
+
 int n,m;
 void findpath(int i,int j,string s){
     // BASE CASE FOR BOUNDARY.
@@ -388,6 +393,29 @@ void findpath(int i,int j,string s){
     s.pop_back();
 
 } 
+
+//STRIVER RECURSION >>>>>>
+
+//(Q)>>
+// SUM OF N NUMBERS>>>>
+
+#include<iostream>
+using namespace std;
+void f(int i,int sum){
+    if(i<1){
+        cout<<sum<<endl;
+        return;
+    }else{
+        f(i-1,sum+i);
+    }
+
+}
+int main(){
+   int i;
+   cin>>i;
+   f(i,0);
+
+}
 
 
 // const int m=1e9+7;
