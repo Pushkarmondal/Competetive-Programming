@@ -349,7 +349,7 @@ int min=*min_element(all(a));
 
 
 // }
-// SUBSET PROBLEM USING RECURSION
+ SUBSET PROBLEM USING RECURSION
 
 // void func(int ind,vector<int>&ds,int arr[],int n){
 //     if(ind==n){
@@ -367,9 +367,9 @@ int min=*min_element(all(a));
 //
 
 
-//STRIVER RECURSION >>>>>>
+*****STRIVER RECURSION*****
 
-// (Q) 2D RECURSION RAT AND MOOSE STARTING***********
+ (Q) 2D RECURSION RAT AND MOOSE STARTING***********
 
 int n,m;
 void findpath(int i,int j,string s){
@@ -394,10 +394,10 @@ void findpath(int i,int j,string s){
 
 } 
 
-//STRIVER RECURSION >>>>>>
+*****STRIVER RECURSION*****
 
-//(Q)>>
-// SUM OF N NUMBERS>>>>
+(Q)>>
+ SUM OF N NUMBERS>>>>
 
 #include<iostream>
 using namespace std;
@@ -418,7 +418,7 @@ int main(){
 }
 
 
-// (*Q) REVERSE AN ARRAY USING RECURSION>>>>>>
+ (*Q) REVERSE AN ARRAY USING RECURSION>>>>>>
 
 void f(int a[],int i,int n){
     if(i>n/2)
@@ -439,8 +439,26 @@ int main(){
     {
         cout<<a[i]<<" ";
     }
+ 
+ 
 
+ (*Q)GIVEN STRING IS PALINDROME OR NOT >>>>
+ 
+ bool f(int i,string &s){
+    if(i>=s.size()/2)
+        return true;
+    if(s[i]!=s[s.size()-i-1])
+        return false;
+    return f(i+1,s);
 
+}
+  
+  
+int main(){
+    string s;
+    cin>>s;
+    cout<<f(0,s);
+}
 
 // const int m=1e9+7;
 //   void solve(){
