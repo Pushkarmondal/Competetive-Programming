@@ -498,6 +498,39 @@ int main(){
     printf(0,ds,a,n);
 }
 
+(*Q)SUM OF 2 INDEX USING RECURSION >>>>>>
+
+void printf(int ind,vector<int> &ds,int s,int sum,int a[],int n){
+    if(ind==n){
+        if(s==sum){
+        for(auto it: ds)
+            cout<<it<<" ";
+            cout<<endl;
+        }
+        return;
+    }
+    ds.push_back(a[ind]);
+    s+=a[ind];
+    printf(ind+1,ds,s,sum,a,n);
+    s-=a[ind];
+    ds.pop_back();
+    printf(ind+1,ds,s,sum,a,n);
+}
+
+int main(){
+    int a[]={1,2,1};
+    int n=3;
+    int sum=2;
+    vector<int> ds;
+    printf(0,ds,0,sum,a,n);
+     
+}
+
+
+
+
+
+
 // const int m=1e9+7;
 //   void solve(){
 //     int a,b;
