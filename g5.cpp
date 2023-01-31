@@ -430,12 +430,30 @@ int main(){
     }
 
 } 
+
+
+(Q)COUNT NO OF OCCURANCE IN AN ARRAY >>>>>>
+
+nt main(){
+    int n;
+    cin>>n;
+    int a[n];
+    for (int i = 0; i <n; ++i)
+    {
+        cin>>a[i];
+    }
+    map<ll,int> map;
+    for (int i = 0; i <n; ++i)
+    {
+        map[a[i]]++;
+    }
+    int q;
+    cin>>q;
+    while(q--){
+        int ans;
+        cin>>ans;
+        cout<<map[ans]<<endl;
+    }
+
+} 
   
-// int main(){   
-//     int t;
-//        cin>>t;
-//        while(t--){
-//         solve();
-//        }
-//     return 0;
-// }
