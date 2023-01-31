@@ -411,7 +411,7 @@ int min=*min_element(all(a));
 
 
 
-
+(Q) CHARACTER HASHING >>>>>>>>>>> USING ASCII VALUE
 
 int main(){
     string s;
